@@ -71,7 +71,7 @@
 # Use `Model.destroy_all` code.
 # TODO!
 #Studio.destroy_all
-#Movie.destroy_all
+Movie.destroy_all
 Actor.destroy_all
 
 # Generate models and tables, according to the domain model.
@@ -89,31 +89,31 @@ Actor.destroy_all
 #new_studio["name"] = "Warner Bros."
 #new_studio.save
 
-#warnerbros = Studio.find_by({"name" => "Warner Bros."})
+warnerbros = Studio.find_by({"name" => "Warner Bros."})
 
 #insert movies
-#new_movie = Movie.new
-#new_movie["title"] = "Batman Begins"
-#new_movie["year_released"] = "2005"
-#new_movie["rated"] = "PG-13"
-#new_movie["studio_id"] = warnerbros["id"]
-#new_movie.save
+new_movie = Movie.new
+new_movie["title"] = "Batman Begins"
+new_movie["year_released"] = "2005"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = warnerbros["id"]
+new_movie.save
 batman = Movie.find_by({"title" => "Batman Begins"})
 
-#new_movie = Movie.new
-#new_movie["title"] = "The Dark Knight"
-#new_movie["year_released"] = "2008"
-#new_movie["rated"] = "PG-13"
-#new_movie["studio_id"] = warnerbros["id"]
-#new_movie.save
+new_movie = Movie.new
+new_movie["title"] = "The Dark Knight"
+new_movie["year_released"] = "2008"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = warnerbros["id"]
+new_movie.save
 darkknight = Movie.find_by({"title" => "The Dark Knight"})
 
-#new_movie = Movie.new
-#new_movie["title"] = "The Dark Knight Rises"
-#new_movie["year_released"] = "2012"
-#new_movie["rated"] = "PG-13"
-#new_movie["studio_id"] = warnerbros["id"]
-#new_movie.save
+new_movie = Movie.new
+new_movie["title"] = "The Dark Knight Rises"
+new_movie["year_released"] = "2012"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = warnerbros["id"]
+new_movie.save
 darkknightrises = Movie.find_by({"title" => "The Dark Knight Rises"})
 
 #insert actors
@@ -175,11 +175,26 @@ ahathaway = Actor.find_by({"name" => "Anne Hathaway"})
 #insert roles
 
 new_role = Role.new
-new_actor["movie_id"] = "xx"
-new_actor["actor_id"] = "xx"
-new_actor["character_name"] = "xx"
-new_actor.save
+new_role["movie_id"] = batman["id"]
+new_role["actor_id"] = cbale["id"]
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
 
+
+# Batman Begins          Michael Caine         Alfred
+# Batman Begins          Liam Neeson           Ra's Al Ghul
+# Batman Begins          Katie Holmes          Rachel Dawes
+# Batman Begins          Gary Oldman           Commissioner Gordon
+# The Dark Knight        Christian Bale        Bruce Wayne
+# The Dark Knight        Heath Ledger          Joker
+# The Dark Knight        Aaron Eckhart         Harvey Dent
+# The Dark Knight        Michael Caine         Alfred
+# The Dark Knight        Maggie Gyllenhaal     Rachel Dawes
+# The Dark Knight Rises  Christian Bale        Bruce Wayne
+# The Dark Knight Rises  Gary Oldman           Commissioner Gordon
+# The Dark Knight Rises  Tom Hardy             Bane
+# The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
+# The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
 
 
