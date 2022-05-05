@@ -37,12 +37,12 @@ DROP TABLE IF EXISTS actors;
 DROP TABLE IF EXISTS roles;
 
 -- Create new tables, according to your domain model
-CREATE TABLE studios (
+CREATE TABLE studios ( --#done
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT
 );
 
-CREATE TABLE movies (
+CREATE TABLE movies ( --#done
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT,
   year_released INTEGER,
@@ -55,7 +55,7 @@ CREATE TABLE actors (
   name TEXT
 );
 
-CREATE TABLE roles (
+CREATE TABLE roles ( --done
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   movie_id INTEGER,
   actor_id INTEGER,
