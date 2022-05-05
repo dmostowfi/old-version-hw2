@@ -98,6 +98,7 @@ Actor.destroy_all
 #new_movie["rated"] = "PG-13"
 #new_movie["studio_id"] = warnerbros["id"]
 #new_movie.save
+batman = Movie.find_by({"title" => "Batman Begins"})
 
 #new_movie = Movie.new
 #new_movie["title"] = "The Dark Knight"
@@ -105,6 +106,7 @@ Actor.destroy_all
 #new_movie["rated"] = "PG-13"
 #new_movie["studio_id"] = warnerbros["id"]
 #new_movie.save
+darkknight = Movie.find_by({"title" => "The Dark Knight"})
 
 #new_movie = Movie.new
 #new_movie["title"] = "The Dark Knight Rises"
@@ -112,6 +114,7 @@ Actor.destroy_all
 #new_movie["rated"] = "PG-13"
 #new_movie["studio_id"] = warnerbros["id"]
 #new_movie.save
+darkknightrises = Movie.find_by({"title" => "The Dark Knight Rises"})
 
 #insert actors
 new_actor = Actor.new
@@ -170,8 +173,6 @@ new_actor.save
 ahathaway = Actor.find_by({"name" => "Anne Hathaway"})
 
 #insert roles
-
-
 
 new_role = Role.new
 new_actor["movie_id"] = "xx"
