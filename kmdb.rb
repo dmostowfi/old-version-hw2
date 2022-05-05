@@ -85,6 +85,7 @@ Role.destroy_all
 #studios done
 #movies done
 #actors done
+#roles done
 
 #new_studio = Studio.new
 #new_studio["name"] = "Warner Bros."
@@ -273,6 +274,24 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+
+movies = Movie.all
+puts movies.inspect
+
+studios = Studio.all
+puts studios[{movies["studio_id"]}]
+
+
+
+#for movie in movies
+    # read each contact row's first_name and last_name columns
+ #   title = movie["title"]
+  #  year_released = movie["title"]
+   # rated = movie["rated"]
+    #studio = studio[movie["studio_id"]]
+    # display the first_name and last_name
+    #puts "#{title} #{year_released}"
+  #end
 
 # Prints a header for the cast output
 puts ""
